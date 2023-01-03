@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {{--  @section('meta')
+      <title>AppReport</title>
+    @end  --}}
+
+  @entryPointStyles('app')
+  @entryPointScripts('app')
+
+  {{--- Fonts ---}}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body>
+    @include('partials/navbar')
+
+    <main class="main">
+        @!section('main')
+    </main>
+  {{--  @includeIf(auth.isAuthenticated,'partials/navbar')  --}}
+
+  {{--  <section class="layout">
+    @includeIf(auth.isAuthenticated, 'partials/sidenav')
+
+    <main>
+      @!section('main')
+    </main>
+  </section>  --}}
+
+</body>
+
+</html>

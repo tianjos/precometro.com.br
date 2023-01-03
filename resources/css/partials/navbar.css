@@ -1,0 +1,6 @@
+.navbar {
+    @apply bg-main-dark
+    border-b
+    border-opacity-50
+    border-main-light;
+}
