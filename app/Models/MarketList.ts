@@ -1,0 +1,44 @@
+import { DateTime } from 'luxon'
+import {
+  BaseModel,
+  BelongsTo,
+  belongsTo,
+  column,
+  HasMany,
+  hasMany,
+  HasOne,
+  hasOne,
+} from '@ioc:Adonis/Lucid/Orm'
+import { MarketListType } from 'App/Types/MarketListType'
+import ItemList from './ItemList'
+import Market from './Market'
+import User from './User'
+
+export default class MarketList extends BaseModel {
+  @column({ isPrimary: true })
+  public id: number
+
+  @column.dateTime({ autoCreate: true })
+  public createdAt: DateTime
+
+  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  public updatedAt: DateTime
+
+  @column()
+  public name: string
+
+  @column()
+  public createdBy: number
+
+  @column()
+  public type: MarketListType | null
+
+  @belongsTo(() => User, { localKey: 'createdBy' })
+  public creator: BelongsTo<typeof User>
+
+  @hasMany(() => ItemList)
+  public items: HasMany<typeof ItemList>
+
+  @hasOne(() => Market)
+  public market: HasOne<typeof Market>
+}

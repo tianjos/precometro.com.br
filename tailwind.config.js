@@ -13,6 +13,11 @@ module.exports = {
         dark: '#242423',
         medium: '#333533',
         light: '#919191',
+        rust: '#EB5E28',
+      },
+      ruler: {
+        light: '##D6D6D6',
+        neon: '#A64CA9',
       },
     },
   },
