@@ -13,6 +13,7 @@ import { MarketListType } from 'App/Types/MarketListType'
 import ItemList from './ItemList'
 import Market from './Market'
 import User from './User'
+import { PaidOption } from 'App/Types/PaidOption'
 
 export default class MarketList extends BaseModel {
   @column({ isPrimary: true })
@@ -32,6 +33,9 @@ export default class MarketList extends BaseModel {
 
   @column()
   public type: MarketListType | null
+
+  @column()
+  public paidOption: PaidOption | null
 
   @belongsTo(() => User, { localKey: 'createdBy' })
   public creator: BelongsTo<typeof User>
