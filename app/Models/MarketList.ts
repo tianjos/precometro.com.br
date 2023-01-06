@@ -1,14 +1,5 @@
 import { DateTime } from 'luxon'
-import {
-  BaseModel,
-  BelongsTo,
-  belongsTo,
-  column,
-  HasMany,
-  hasMany,
-  HasOne,
-  hasOne,
-} from '@ioc:Adonis/Lucid/Orm'
+import { BaseModel, BelongsTo, belongsTo, column, HasMany, hasMany } from '@ioc:Adonis/Lucid/Orm'
 import { MarketListType } from 'App/Types/MarketListType'
 import ItemList from './ItemList'
 import Market from './Market'
@@ -32,6 +23,9 @@ export default class MarketList extends BaseModel {
   public createdBy: number
 
   @column()
+  public marketId: number
+
+  @column()
   public type: MarketListType | null
 
   @column()
@@ -43,6 +37,6 @@ export default class MarketList extends BaseModel {
   @hasMany(() => ItemList)
   public items: HasMany<typeof ItemList>
 
-  @hasOne(() => Market)
-  public market: HasOne<typeof Market>
+  @belongsTo(() => Market)
+  public market: BelongsTo<typeof Market>
 }
