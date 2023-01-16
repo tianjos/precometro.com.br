@@ -1,0 +1,9 @@
+<div class="header">
+    @if($slots.filters)
+        {{{ await $slots.filters() }}}
+    @endif
+
+    @if($slots.header)
+        {{{ await $slots.header() }}}
+    @endif
+</div>

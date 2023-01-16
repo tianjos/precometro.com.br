@@ -21,7 +21,8 @@
     @include('partials/navbar')
 
     <main class="main">
-        @!section('main')
+        @!section('header')
+        @!section('content')
     </main>
   {{--  @includeIf(auth.isAuthenticated,'partials/navbar')  --}}
 
