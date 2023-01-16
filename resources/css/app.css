@@ -6,6 +6,7 @@
 
 /* layout */
 @import './layouts/main.css';
+@import './layouts/header.css';
 @import './layouts/content.css';
 
 /* partials */
