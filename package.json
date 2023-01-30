@@ -48,7 +48,7 @@
     "adonis-preset-ts": "^2.1.0",
     "alpinejs": "^3.11.1",
     "autoprefixer": "^10.4.13",
-    "daisyui": "^2.46.1",
+    "daisyui": "^2.49.0",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-adonis": "^2.1.1",
