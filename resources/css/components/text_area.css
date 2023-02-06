@@ -1,0 +1,8 @@
+.market-list {
+    @apply textarea
+    textarea-bordered
+    textarea-ghost
+    w-3/4
+    min-h-[140px]
+    max-h-[450px]
+}

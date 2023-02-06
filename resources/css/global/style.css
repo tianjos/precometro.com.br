@@ -2,4 +2,26 @@
     :root {
         @apply bg-main-medium;
     }
+    /* Typography */
+    h2, h3, h4, h5, h6, p, a {
+        @apply font-ubuntu-condensed
+        text-main-light
+        font-normal;
+    }
+
+    h2 {
+        @apply text-[2rem]
+        leading-[2.375rem];
+    }
+
+    h3 {
+        @apply text-[3rem]
+        leading-[3.750rem];
+    }
+
+    /* Buttons */
+    button {
+        @apply btn
+        gap-2;
+    }
 }

@@ -1,0 +1,18 @@
+@layout('layouts/main')
+
+@section('header')
+<div class="header">
+    <div class="flex flex-1 items-center justify-between w-3/4">
+        <h2>Lista de Compras</h2>
+        <button>+ Adicionar</button>
+    </div>
+</div>
+@endsection
+
+@section('content')
+<div class="content">
+    @!component('components/text_list')
+
+    {{--  @!component('components/modal')  --}}
+</div>
+@endsection

@@ -21,3 +21,8 @@
 import Route from '@ioc:Adonis/Core/Route'
 
 Route.get('/', 'HomeController.index').as('home.index')
+
+Route.group(() => {
+  Route.get('/create', 'MarketListsController.create').as('market-list.create')
+  Route.post('/store', 'MarketListsController.store').as('market-list.store')
+}).prefix('market-lists')

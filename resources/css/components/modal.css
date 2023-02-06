@@ -1,0 +1,81 @@
+.modal-container {
+    @apply fixed
+    inset-0
+    backdrop-blur-sm
+    flex
+    justify-center
+    select-none
+    z-50;
+}
+
+.modal-container > div {
+    @apply relative
+    mt-20
+    mb-20
+    w-[30rem]
+    min-w-[18.75rem]
+    min-h-[300px]
+    max-h-[500px]
+    bg-main-medium
+    border
+    border-main-light
+    rounded-md;
+}
+
+.modal-container > .modal-header {
+    @apply flex
+    justify-between
+}
+
+/* .modal-container > div > .close-modal {
+    @apply absolute 
+    top-2.5
+    right-1;
+}
+
+.modal-container > div > .close-modal > button {
+    @apply btn-circle 
+    btn-ghost 
+    hover:bg-main-light
+    hover:bg-opacity-10;
+}
+
+.modal-container > div > .modal-content {
+    @apply flex
+    flex-col
+    justify-between
+    h-full;
+}
+
+.modal-container > div > .modal-content > :is(:nth-child(1), :nth-child(3)) {
+    @apply flex-none;
+}
+
+.modal-container > div > .modal-content > :nth-child(1) > div {
+    @apply p-10px
+    bg-main-60
+    bg-opacity-50
+    select-none;
+}
+
+.modal-container > div > .modal-content > div:nth-child(2) {
+    @apply flex-grow
+    p-20px 
+    overflow-auto;
+}
+
+.modal-container > div > .modal-content > div:nth-child(2) > div {
+    @apply flex 
+    flex-col 
+    gap-15px;
+}
+
+.modal-container > div > .modal-content > div:nth-child(3) > button {
+    @apply no-animation 
+    btn-block 
+    btn-success 
+    button-hover 
+    rounded-b-sm 
+    rounded-t-none 
+    text-white;
+} */

@@ -1,0 +1,13 @@
+<div class="modal">
+    @if($slots.header)
+        {{{ await $slots.header() }}}
+    @endif
+
+    @if($slots.content)
+        {{{ await $slots.content() }}}
+    @endif
+
+    @if($slots.footer)
+        {{{ await $slots.footer() }}}
+    @endif
+</div>
