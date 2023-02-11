@@ -4,14 +4,17 @@
 <div class="header">
     <div class="flex flex-1 items-center justify-between w-3/4">
         <h2>Lista de Compras</h2>
-        <button>+ Adicionar</button>
+        <button x-data x-on:click="$dispatch('saveMarket')">+ Adicionar</button>
     </div>
 </div>
 @endsection
 
 @section('content')
-<div class="content">
-    @!component('components/text_list')
+<div x-data="listCreate" class="content">
+    <form action="{{ route('market-list.store') }}" method="post">
+        @!component('components/text_list')
+        <button x-ref="submit" hidden></button>
+    </form>
 
     {{--  @!component('components/modal')  --}}
 </div>
