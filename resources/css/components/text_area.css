@@ -1,8 +1,13 @@
 .market-list {
     @apply textarea
     textarea-bordered
-    textarea-ghost
+    resize-y
+    focus:outline-none
     w-3/4
+    rounded-[2.5px]
+    bg-main-medium
     min-h-[140px]
     max-h-[450px]
+    px-2
+    py-1;
 }

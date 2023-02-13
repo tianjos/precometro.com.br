@@ -5,7 +5,10 @@ export default class MarketListsController {
     return view.render('pages/market-lists/create')
   }
 
-  public async store({ response }: HttpContextContract) {
+  public async store({ request, response }: HttpContextContract) {
+    const marketList: string = request.input('market-list') ?? ''
+    const items = marketList.split('\r\n')
+    console.log(items[0])
     return response.json({ ok: 'it works' })
   }
 }

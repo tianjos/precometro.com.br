@@ -4,14 +4,21 @@
 <div class="header">
     <div class="flex flex-1 items-center justify-between w-3/4">
         <h2>Lista de Compras</h2>
-        <button x-data x-on:click="$dispatch('saveMarket')">+ Adicionar</button>
+        @component('components/buttons_group')
+            @slot('buttonsGroup')
+                <button class="btn btn-outline btn-secondary rounded-[2.5px] tracking-widest" x-data x-on:click="$dispatch('saveMarket')">
+                    <span class="material-icons-outlined">add</span>
+                    Salvar
+                </button>
+            @end
+        @endcomponent
     </div>
 </div>
 @endsection
 
 @section('content')
 <div x-data="listCreate" class="content">
-    <form action="{{ route('market-list.store') }}" method="post">
+    <form class="w-full" action="{{ route('market-list.store') }}" method="post">
         @!component('components/text_list')
         <button x-ref="submit" hidden></button>
     </form>
