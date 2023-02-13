@@ -17,7 +17,7 @@ module.exports = {
       },
       ruler: {
         light: '##D6D6D6',
-        neon: '#A64CA9',
+        neon: '#582F7F',
       },
     },
   },
