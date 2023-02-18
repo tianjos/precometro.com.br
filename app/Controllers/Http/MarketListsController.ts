@@ -7,8 +7,9 @@ export default class MarketListsController {
 
   public async store({ request, response }: HttpContextContract) {
     const marketList: string = request.input('market-list') ?? ''
-    const items = marketList.split('\r\n')
-    console.log(items[0])
+    console.log(marketList)
+    // const items = marketList.split('\r\n')
+    // console.log(items[0])
     return response.json({ ok: 'it works' })
   }
 }

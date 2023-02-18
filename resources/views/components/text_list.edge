@@ -1,3 +1,4 @@
-<div class="flex justify-center w-full">
-    <textarea class="market-list" placeholder="1- arroz, 5 kg, camil" name='market-list' autocomplete="off"></textarea>
+<div class="flex flex-col gap-y-[2.5px] justify-center items-center w-full">
+    <label class="w-3/4 border-[0.125px] border-main-light bg-main-dark select-none rounded-t-lg pl-2 py-1 font-ubuntu text-sm tracking-wide" for="market-list" x-text="getTotalItems()"></label>
+    <textarea id="market-list" class="market-list" placeholder="1- arroz, 5 kg, camil" name='market-list' autocomplete="off" x-on:change="updateItems($el.value)"></textarea>
 </div>

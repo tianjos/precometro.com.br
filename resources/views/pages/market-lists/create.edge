@@ -18,9 +18,10 @@
 
 @section('content')
 <div x-data="listCreate" class="content">
-    <form class="w-full" action="{{ route('market-list.store') }}" method="post">
+    <form class="w-full" action="{{ route('market-list.store') }}" method="post" x-on:submit="onSubmit">
         @!component('components/text_list')
         <button x-ref="submit" hidden></button>
+        <input id="_market-list" name="market-list" type="text" hidden/>
     </form>
 
     {{--  @!component('components/modal')  --}}
