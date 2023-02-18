@@ -4,7 +4,9 @@
     resize-y
     focus:outline-none
     w-3/4
-    rounded-[2.5px]
+    rounded-t-none
+    border-[0.125px]
+    border-main-light
     bg-main-medium
     min-h-[140px]
     max-h-[450px]
