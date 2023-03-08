@@ -1,0 +1,25 @@
+<div x-data="{ items: []}" class="flex flex-col items-center gap-y-10">
+    <div id="input-item" class="form-control">
+        <label class="input-group">
+            <input x-ref="inputItem" type="text" placeholder="Arroz" class="input focus:outline-none bg-main-medium border-main-dark font-ubuntu tracking-wide" @keydown.enter.prevent />
+            <span x-on:click="items.push($refs.inputItem.value); $refs.inputItem.value = ''" class="material-icons-outlined cursor-pointer hover:opacity-80 transition ease-in">
+                add
+            </span>
+        </label>
+    </div>
+
+        <div id="items" class="space-x-2 space-y-2 w-1/2 p-2 bg-main-medium border border-main-dark rounded min-h-20 h-auto" x-show="items.length" x-cloak style="display: none !important">
+            <template x-for="(item, index) in items" :key="index">
+                <div class="badge badge-outline gap-2 p-3">
+                    <span class="font-ubuntu tracking-wide" x-text="item"></span> 
+                    <span class="material-icons-outlined text-sm cursor-pointer" x-on:click="items.splice(index, 1)">
+                        clear
+                    </span>
+                </div>
+            </template>
+        </div>
+    
+    <div x-show="!items.length">
+        @!component('components/no_content', { text: 'Nenhum item adicionado ainda'})
+    </div>
+</div>

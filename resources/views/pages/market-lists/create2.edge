@@ -1,0 +1,27 @@
+@layout('layouts/main')
+
+@section('header')
+<div class="header">
+    <div class="flex flex-1 items-center justify-between w-3/4">
+        <h2>Nova Lista</h2>
+        @component('components/buttons_group')
+            @slot('buttonsGroup')
+                <button class="btn btn-outline btn-secondary rounded-[2.5px] tracking-widest" x-data x-on:click="$dispatch('saveMarket')">
+                    <span class="material-icons-outlined">add</span>
+                    Salvar
+                </button>
+            @end
+        @endcomponent
+    </div>
+</div>
+@endsection
+
+@section('content')
+<div x-data="listCreate" class="content">
+    <form class="w-full" action="{{ route('market-list.store') }}" method="post" x-on:submit="onSubmit">
+        @!component('components/items')
+        <button x-ref="submit" hidden></button>
+        <input id="_market-list" name="market-list" type="text" hidden/>
+    </form>
+</div>
+@endsection
